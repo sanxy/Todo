@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Todo</string>
+
+    <string name="category">Category</string>
+    <string name="abcd_journal">ABCD Todo</string>
+    <string name="a">A</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="alarm">Alarm</string>
+    <string name="submit">Submit</string>
+    <string name="alarm2">Alarm</string>
+    <string name="hour_minute">HH:MM</string>
+    <string name="day_month_year">DD/MM/YYYY</string>
+    <string name="journal_name">Todo Name</string>
+    <string name="today">Today</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="done_missed">Done/Missed</string>
+    <string name="add_journal">Add Todo</string>
+    <string name="edit_journal">Edit Todo</string>
+    <string name="required_field">Required Field</string>
+    <string name="remove_journal">Remove Todo</string>
+    <string name="are_you_sure">Are you sure ?</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="journal_shared_pref">todo_shared_preference</string>
+    <string name="is_first_time">isFirstTime</string>
+    <string name="loading">Loading…</string>
+    <string name="action_close">Dismiss</string>
+</resources>

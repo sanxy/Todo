@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_category"
+        android:layout_width="@dimen/zero_padding"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/eight_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:layout_marginTop="@dimen/eight_padding"
+        android:hint="@string/category"
+        android:textSize="@dimen/normal_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="@dimen/eight_padding"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/reset_padding"
+        android:layout_marginBottom="@dimen/eight_padding"
+        android:layout_marginEnd="@dimen/eight_padding"
+        android:layout_marginLeft="@dimen/eight_padding"
+        android:layout_marginRight="@dimen/eight_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:layout_marginTop="@dimen/eight_padding"
+        android:hint="@string/description"
+        android:textSize="@dimen/normal_text"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_category"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_date"
+        android:layout_width="@dimen/layout_width_big"
+        android:layout_height="@dimen/layout_width_small"
+        android:layout_marginBottom="@dimen/eight_padding"
+        android:layout_marginEnd="@dimen/eight_padding"
+        android:layout_marginLeft="@dimen/eight_padding"
+        android:layout_marginRight="@dimen/eight_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:layout_marginTop="@dimen/eight_padding"
+        android:text="@string/date"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/reset_big_text"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_priority"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_desc"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_time"
+        android:layout_width="@dimen/layout_width_big"
+        android:layout_height="@dimen/layout_width_smaller"
+        android:layout_marginBottom="@dimen/eight_padding"
+        android:layout_marginEnd="@dimen/reset_medium_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:text="@string/time"
+        android:textSize="@dimen/reset_big_text"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_priority"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/dialog_date"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/dialog_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/eight_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:isIndicator="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:theme="@style/Theme.Todo.RatingBarTheme" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="192dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/dialog_alarm"
+        android:clickable="false"
+        android:layout_width="@dimen/zero_padding"
+        android:layout_height="@dimen/zero_padding"
+        android:layout_marginBottom="@dimen/eight_padding"
+        android:layout_marginStart="@dimen/eight_padding"
+        android:layout_marginEnd="@dimen/zero_padding"
+        android:layout_marginTop="@dimen/eight_padding"
+        android:text="@string/alarm"
+        android:textSize="@dimen/normal_text"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_priority"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/dialog_priority"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_priority"
+        app:layout_constraintVertical_bias="0.0"
+        android:theme="@style/Theme.Todo.SwitchTheme"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

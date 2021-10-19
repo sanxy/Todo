@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:conhint=".TodoDetailsActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    android:background="@color/dayCardBg">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/journal_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/journal_name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+       android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginStart="@dimen/margin_top"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <Spinner
+        android:id="@+id/journal_category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintTop_toBottomOf="@+id/journal_name_edit_text"
+        android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginStart="@dimen/margin_top"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/journal_date_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/day_month_year"
+        android:focusable="false"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintTop_toBottomOf="@+id/journal_category_spinner"
+        android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginStart="@dimen/margin_top"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/journal_time_edit_text"
+        android:layout_width="@dimen/journal_detail_big_width"
+        android:layout_height="@dimen/layout_width_smaller"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/hour_minute"
+        android:focusable="false"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintTop_toBottomOf="@+id/journal_date_edit_text"
+        android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginStart="@dimen/margin_top"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/journal_alarm_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zero_padding"
+        android:text="@string/alarm2"
+        android:textSize="@dimen/normal_text"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        app:layout_constraintTop_toTopOf="@+id/journal_time_edit_text"
+        android:layout_marginTop="@dimen/eight_padding"
+        app:layout_constraintBottom_toBottomOf="@+id/journal_time_edit_text"
+        android:layout_marginBottom="@dimen/eight_padding"
+        app:layout_constraintLeft_toRightOf="@+id/journal_time_edit_text"
+        android:layout_marginLeft="@dimen/eight_padding"
+        android:layout_marginRight="@dimen/eight_padding"
+        android:theme="@style/Theme.Todo.SwitchTheme"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/journal_desc_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/description"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintTop_toBottomOf="@+id/journal_time_edit_text"
+        android:layout_marginEnd="@dimen/margin_top"
+        android:layout_marginStart="@dimen/margin_top"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/journal_priority_rating_bar"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/zero_padding"
+        android:layout_marginTop="@dimen/medium_padding"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/journal_desc_edit_text"
+        android:stepSize="1"
+        android:theme="@style/Theme.Todo.RatingBarTheme"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/journal_submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:text="@string/submit"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/journal_priority_rating_bar"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="39dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
